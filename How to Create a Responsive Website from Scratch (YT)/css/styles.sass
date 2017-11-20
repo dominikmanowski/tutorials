@@ -1,0 +1,112 @@
+//Google font: Raleway
+//Light -> 300
+//Regular -> 400
+//Bold -> 700
+//Heavy -> 900
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900')
+
+$primary-font-color: #fff
+$accent-color: #00ff6c
+$second-color: #232323
+
+*
+  box-sizing: border-box //padding is not added to total width of box
+
+body
+  margin: 0
+  font-family: Raleway, sans-serif
+  text-align: center
+
+img
+  max-width: 100%
+  height: auto
+
+.container
+  width: 95%
+  margin: 0 auto
+
+//typography
+//----------
+.title
+  font-size: 2.5rem
+  margin-bottom: 1.5em
+  span
+    font-weight: 300
+    display: block //puts span on its own line
+    font-size: .9em
+
+@media (min-width: 60rem)
+  .title
+    font-size: 3.7rem
+
+//button
+.button
+  display: inline-block //enables top and bottom paddings and margins
+  font-size: 1.15rem
+  text-decoration: none
+  text-transform: uppercase
+  border-width: 2px
+  border-style: solid
+  padding: .5em 1.75em
+
+.button-accent
+  color: $accent-color
+  border-color: $accent-color
+  &:hover,:focus
+    background: $accent-color
+    color: $second-color
+
+@media (min-width: 60rem)
+  .button
+    font-size: 1.5rem
+
+//header
+//------
+
+header
+  position: absolute
+  //centers logo:
+  left: 0
+  right: 0
+  margin: 1em
+
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+nav
+  li
+    display: inline-block
+    margin: 1em
+
+nav
+  a
+    font-weight: 900
+    text-decoration: none
+    text-transform: uppercase
+    font-size: .8rem
+    padding: .5em
+    color: $primary-font-color
+
+@media (min-width: 60rem) //on bigger screens logo is on left and navigation is on right
+  .logo
+    float: left
+  nav
+    float: right
+
+//home-hero
+//---------
+
+.home-hero
+  background: url(../img/hero-bg.jpg) center
+  background-size: cover
+  padding: 10em 0
+  color: $primary-font-color
+
+@media (min-width: 60rem)
+  .home-hero
+    height: 100vh
+    padding-top: 35vh
