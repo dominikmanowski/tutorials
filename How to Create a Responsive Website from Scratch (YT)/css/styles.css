@@ -13,7 +13,20 @@ img {
 
 .container {
   width: 95%;
+  max-width: 70em;
   margin: 0 auto; }
+
+h2 {
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-top: 0; }
+
+p {
+  margin-top: 0;
+  line-height: 1.5; }
+
+p:last-of-type {
+  margin-bottom: 0; }
 
 .title {
   font-size: 2.5rem;
@@ -24,6 +37,10 @@ img {
     font-size: 0.9em; }
 
 @media (min-width: 60rem) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+
   .title {
     font-size: 3.7rem; } }
 .button {
@@ -84,5 +101,49 @@ nav a {
   .home-hero {
     height: 100vh;
     padding-top: 35vh; } }
+.home-about-textbox {
+  background-color: #232323;
+  padding: 4em;
+  margin: 0 -2.5vw 0 -2.5vw;
+  outline: 2px solid #00ff6c;
+  outline-offset: -2.5em;
+  color: #fff;
+  position: relative; }
+  .home-about-textbox h2 {
+    background-color: #232323;
+    color: #00ff6c;
+    top: 0.75em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0.145em; }
+
+@media (min-width: 25rem) {
+  h2 {
+    font-size: 2rem; }
+
+  .home-about h2 {
+    top: 0.6em;
+    padding: 0 0.325em; } }
+@media (min-width: 60rem) {
+  h2 {
+    font-size: 2.5rem; }
+
+  .home-about {
+    background: url(../img/who-we-are.jpg) no-repeat;
+    padding-bottom: 10em; }
+
+  .home-about-textbox {
+    width: 50%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -2.5%;
+    top: -5em;
+    text-align: left;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3); }
+    .home-about-textbox h2 {
+      top: 0.75em;
+      left: 6rem;
+      transform: translateX(0); } }
 
 /*# sourceMappingURL=styles.css.map */
