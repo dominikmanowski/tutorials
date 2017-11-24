@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms; }
 
 body {
   margin: 0;
@@ -52,6 +53,13 @@ p:last-of-type {
   border-style: solid;
   padding: 0.5em 1.75em; }
 
+@media (min-width: 60rem) {
+  .button {
+    font-size: 1.5rem; } }
+.button-small {
+  font-size: 0.7rem;
+  font-weight: 700; }
+
 .button-accent {
   color: #00ff6c;
   border-color: #00ff6c; }
@@ -59,9 +67,6 @@ p:last-of-type {
     background: #00ff6c;
     color: #232323; }
 
-@media (min-width: 60rem) {
-  .button {
-    font-size: 1.5rem; } }
 header {
   position: absolute;
   left: 0;
@@ -145,5 +150,40 @@ nav a {
       top: 0.75em;
       left: 6rem;
       transform: translateX(0); } }
+.portfolio {
+  padding: 3em 0; }
+
+.port-item {
+  margin: 0;
+  position: relative; }
+  .port-item img {
+    display: block; }
+
+.port-description {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 2em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6); }
+  .port-description p {
+    margin: 1em; }
+
+@media (min-width: 37rem) {
+  .port-item {
+    width: 50%;
+    float: left; } }
+@media (min-width: 60rem) {
+  .port-item {
+    width: 33.333334%;
+    overflow: hidden; }
+
+  .port-description {
+    transform: translateY(150%); }
+
+  .port-item:hover .port-description {
+    transform: translateY(0%); } }
 
 /*# sourceMappingURL=styles.css.map */

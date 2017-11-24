@@ -12,6 +12,7 @@ $second-color: #232323
 
 *
   box-sizing: border-box //padding is not added to total width of box
+  transition: all ease-in-out 250ms
 
 body
   margin: 0
@@ -68,6 +69,14 @@ p:last-of-type
   border-style: solid
   padding: .5em 1.75em
 
+@media (min-width: 60rem)
+  .button
+    font-size: 1.5rem
+
+.button-small
+  font-size: .7rem
+  font-weight: 700
+
 .button-accent
   color: $accent-color
   border-color: $accent-color
@@ -75,9 +84,7 @@ p:last-of-type
     background: $accent-color
     color: $second-color
 
-@media (min-width: 60rem)
-  .button
-    font-size: 1.5rem
+
 
 //header
 //------
@@ -173,9 +180,48 @@ nav
     margin-left: -2.5%
     top: -5em
     text-align: left
-    box-shadow: 0 0 4em 0 rgba(0,0,0,.3)
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3)
     h2
       top: .75em
       left: 6rem
       transform: translateX(0)
 
+//portfolio
+//---------
+
+.portfolio
+  padding: 3em 0
+
+.port-item
+  margin: 0
+  position: relative
+  img
+    display: block //removes spaces between images
+
+.port-description
+  position: absolute
+  z-index: 100 //place description on top of the photo
+  bottom: 0
+  left: 0
+  right: 0
+  padding-bottom: 2em
+  color: $primary-font-color
+  background: rgba(0, 0, 0, .6)
+  p
+    margin: 1em
+
+@media (min-width: 37rem)
+  .port-item
+    width: 50%
+    float: left
+
+@media (min-width: 60rem)
+  .port-item
+    width: 33.333334%
+    overflow: hidden
+
+  .port-description
+    transform: translateY(150%) //moves descriptions under and overflow:hidden hides them if are outside of the parent div
+
+  .port-item:hover .port-description
+    transform: translateY(0%)
