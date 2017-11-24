@@ -17,7 +17,13 @@ img {
   max-width: 70em;
   margin: 0 auto; }
 
-h2 {
+.clearfix::after,
+section::after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+h1, h2 {
   font-weight: 300;
   font-size: 1.7rem;
   margin-top: 0; }
@@ -31,11 +37,16 @@ p:last-of-type {
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em; }
   .title span {
     font-weight: 300;
     display: block;
     font-size: 0.9em; }
+
+.title-call-to-action {
+  margin: 0 0 0.5em; }
 
 @media (min-width: 60rem) {
   p {
@@ -66,6 +77,13 @@ p:last-of-type {
   .button-accent:hover, .button-accent :focus {
     background: #00ff6c;
     color: #232323; }
+
+.button-dark {
+  color: #232323;
+  border-color: #232323; }
+  .button-dark:hover, .button-dark :focus {
+    background: #232323;
+    color: #00ff6c; }
 
 header {
   position: absolute;
@@ -151,7 +169,7 @@ nav a {
       left: 6rem;
       transform: translateX(0); } }
 .portfolio {
-  padding: 3em 0; }
+  padding: 3em 0 0; }
 
 .port-item {
   margin: 0;
@@ -185,5 +203,9 @@ nav a {
 
   .port-item:hover .port-description {
     transform: translateY(0%); } }
+.call-to-action {
+  background: #00ff6c;
+  padding: 5em 0;
+  color: #232323; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,7 +8,7 @@
 
 $primary-font-color: #fff
 $accent-color: #00ff6c
-$second-color: #232323
+$secondary-color: #232323
 
 *
   box-sizing: border-box //padding is not added to total width of box
@@ -28,10 +28,17 @@ img
   max-width: 70em
   margin: 0 auto
 
+.clearfix::after,
+section::after
+  content: ' '
+  display: block
+  clear: both
+
+
 //typography
 //----------
 
-h2
+h1, h2
   font-weight: 300
   font-size: 1.7rem
   margin-top: 0
@@ -46,10 +53,15 @@ p:last-of-type
 .title
   font-size: 2.5rem
   margin-bottom: 1.5em
+  font-weight: 900
+  margin-top: 1em
   span
     font-weight: 300
     display: block //puts span on its own line
     font-size: .9em
+
+.title-call-to-action
+  margin: 0 0 .5em
 
 @media (min-width: 60rem)
   p
@@ -82,7 +94,14 @@ p:last-of-type
   border-color: $accent-color
   &:hover,:focus
     background: $accent-color
-    color: $second-color
+    color: $secondary-color
+
+.button-dark
+  color: $secondary-color
+  border-color: $secondary-color
+  &:hover,:focus
+    background: $secondary-color
+    color: $accent-color
 
 
 
@@ -140,7 +159,7 @@ nav
 //----------
 
 .home-about-textbox
-  background-color: $second-color
+  background-color: $secondary-color
   padding: 4em
   margin: 0 -2.5vw 0 -2.5vw
   outline: 2px solid $accent-color
@@ -148,7 +167,7 @@ nav
   color: $primary-font-color
   position: relative
   h2
-    background-color: $second-color
+    background-color: $secondary-color
     color: $accent-color
     top: .75em
     position: absolute
@@ -190,7 +209,7 @@ nav
 //---------
 
 .portfolio
-  padding: 3em 0
+  padding: 3em 0 0
 
 .port-item
   margin: 0
@@ -225,3 +244,11 @@ nav
 
   .port-item:hover .port-description
     transform: translateY(0%)
+
+//call to action
+//--------------
+
+.call-to-action
+  background: $accent-color
+  padding: 5em 0
+  color: $secondary-color
