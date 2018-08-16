@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js",
-    "prod": "webpack src/js/app.js dist/bundle.js -p"
+    "build": "webpack-dev-server",
+    "prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2"
   }
 }
